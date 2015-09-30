@@ -3,11 +3,10 @@ var Schema = mongoose.Schema;
 
 //need to add restrictions on data and required fields
 module.exports = mongoose.model('User', new Schema({
-	id: String,
 	username: String,
-	password: String,
-	email: String,
+	password: {type: String, required: true},
+	email: {type: String, required: true},
 	firstName: String,
 	lastName: String,
-    posts: Array
+    posts: [Schema.Types.ObjectId]
 }));

@@ -1,6 +1,6 @@
 var Post = require("../models/post.js"); //mongoDB collection of posts
 var Category = require("../models/category.js"); //mongoDB collection of categories
-var ObjectId = require('mongoose').Types.ObjectId; 
+var ObjectId = require('mongoose').Types.ObjectId; //used for ID's in DB objects 
 
 exports.getPosts = function(req, res){
     Post.find({}, function(err, posts){
